@@ -15,14 +15,17 @@ class BannerWidget extends StatelessWidget {
           color: AppColors.bannerBGColor,
           borderRadius: BorderRadius.circular(12),
         ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Stack(
+
         children: [
           // Image(image: AssetImage("/assets/image/sister.png"),),
           SvgPicture.asset("assets/image/sister.svg",height: 350,),
-          Transform.flip(
-            flipX: true,
-            child:  SvgPicture.asset("assets/image/sister.svg",height: 350,),
+          Align(
+            alignment: Alignment.centerRight,
+            child: Transform.flip(
+              flipX: true,
+              child:  SvgPicture.asset("assets/image/sister.svg",height: 350,),
+            ),
           )
 
         ],
