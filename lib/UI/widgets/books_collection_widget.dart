@@ -14,8 +14,8 @@ class BookCollectionWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
            Padding(
-            padding: EdgeInsets.only(left: 18.0),
-            child: Text(title,style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold),),
+            padding: const EdgeInsets.only(left: 18.0),
+            child: Text(title,style: const TextStyle(fontSize: 32,fontWeight: FontWeight.bold),),
           ),
           SizedBox(
             height: 240,
