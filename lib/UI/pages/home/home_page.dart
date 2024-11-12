@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:liber/UI/component/books_types_bar.dart';
 import 'package:liber/UI/component/custom_app_bar.dart';
 import 'package:liber/UI/widgets/banner_widget.dart';
-import 'package:liber/UI/widgets/books_collection.dart';
+import 'package:liber/UI/widgets/books_collection_widget.dart';
 
+import '../../widgets/bottom_information_widget.dart';
 import '../../widgets/elements_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -37,6 +38,7 @@ class HomePage extends StatelessWidget {
                  ],
                ),
              ),
+             BottomInformationWidget(),
 
            ],
          ),
