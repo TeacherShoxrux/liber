@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:liber/UI/pages/books/books_page.dart';
 import 'package:liber/UI/pages/home/home_page.dart';
 
 import 'UI/component/custom_app_bar.dart';
@@ -18,7 +19,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomePage(),
+      home:
+          // HomePage(),
+      const BooksPage(),
     );
   }
 }

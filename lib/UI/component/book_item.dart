@@ -9,6 +9,7 @@ class BookItem extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 7),
       width: 160,
+      height: 230,
       decoration: BoxDecoration(
         // color: Colors.amber,
         borderRadius: BorderRadius.circular(15),
@@ -35,14 +36,15 @@ class BookItem extends StatelessWidget {
               alignment: Alignment.bottomCenter,
             ),
           ),
-          Text(
+          const Text(
             "Бепарволикнинг но Rich dad poor dad ",
             overflow: TextOverflow.ellipsis,
             maxLines: 2,
             textAlign: TextAlign.center,
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          Text(
+          // const Spacer(),
+          const Text(
             "SIYOSAT, FANTASTIKA",
             overflow: TextOverflow.ellipsis,
             maxLines: 1,
