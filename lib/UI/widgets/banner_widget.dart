@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:liber/UI/colors/colors.dart';
 class BannerWidget extends StatelessWidget {
   const BannerWidget({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,7 +15,6 @@ class BannerWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
       child: Stack(
-
         children: [
           // Image(image: AssetImage("/assets/image/sister.png"),),
           SvgPicture.asset("assets/image/sister.svg",height: 350,),
