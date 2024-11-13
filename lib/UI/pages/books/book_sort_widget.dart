@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:liber/UI/colors/colors.dart';
 class BookSortWidget extends StatefulWidget {
-  const BookSortWidget({super.key});
+  final VoidCallback? onTapList;
+  final VoidCallback? onTapGrid;
+  const BookSortWidget({super.key, this.onTapList, this.onTapGrid});
 
   @override
   State<BookSortWidget> createState() => _BookSortWidgetState();
@@ -36,12 +38,14 @@ class _BookSortWidgetState extends State<BookSortWidget> {
                 padding: const EdgeInsets.only(top: 7,bottom:7,right: 15.0),
                 child: IconButton(onPressed: (){
                   blk=false;
+                  if(widget.onTapGrid!=null)widget.onTapList!();
                 }, icon: Icon(Icons.list,color: blk? AppColors.grayDark:AppColors.mainColor,)),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 7,bottom:7,right: 15.0),
                 child: IconButton(onPressed: (){setState(() {
                   blk=true;
+                  if(widget.onTapGrid!=null)widget.onTapGrid!();
                 });}, icon: Icon(Icons.apps,color: !blk? AppColors.grayDark:AppColors.mainColor,)),
               ),
             ],

@@ -5,6 +5,7 @@ import '../../component/books_types_bar.dart';
 import '../../component/custom_app_bar.dart';
 import '../../widgets/bottom_information_widget.dart';
 import '../../widgets/bottom_social_media_widget.dart';
+import 'book_sort_widget.dart';
 import 'books_list.dart';
 class BooksPage extends StatelessWidget {
   const BooksPage({super.key});
@@ -34,6 +35,7 @@ class BooksPage extends StatelessWidget {
                       ],
                     ),
                     //here
+                    // Flexible(child: BookSortWidget())
                     BooksList()
                   ],
                   ),
