@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:liber/UI/component/custom_button.dart';
 
+import '../pages/login/login_page_dialog.dart';
+
 class CustomAppBar extends StatelessWidget {
   final String title;
   final Color backgroundColor;
@@ -24,7 +26,7 @@ class CustomAppBar extends StatelessWidget {
         children: [
           Row(
             children: [
-              SizedBox(height: 90),
+              const SizedBox(height: 90),
               SvgPicture.asset("assets/icons/app_icon.svg",
                   height: 110, fit: BoxFit.cover, semanticsLabel: 'Acme Logo'),
               const Column(
@@ -52,7 +54,14 @@ class CustomAppBar extends StatelessWidget {
                   ),
                   prefixIcon: IconButton(
                     icon: Icon(Icons.search),
-                    onPressed: () {},
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return PhoneNumberDialog();
+                        },
+                      );
+                    },
                   ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20.0),

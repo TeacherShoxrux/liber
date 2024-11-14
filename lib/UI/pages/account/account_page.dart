@@ -10,6 +10,7 @@ import '../../widgets/bottom_social_media_widget.dart';
 import 'nested_pages/account_balance_widget.dart';
 import 'nested_pages/saved_books_widget.dart';
 import 'nested_pages/setting_form.dart';
+import 'nested_pages/upload_page.dart';
 class AccountPage extends StatelessWidget {
   const AccountPage({super.key});
 
@@ -61,7 +62,8 @@ class AccountPage extends StatelessWidget {
           //       isFavorite: true,
           //     ),
           //   ],)
-                    AccountBalanceWidget(balance: 45000,)
+          //           AccountBalanceWidget(balance: 45000,),
+                    UploadScreen()
                     // Flexible(child: BookSortWidget())
 
                   ],
