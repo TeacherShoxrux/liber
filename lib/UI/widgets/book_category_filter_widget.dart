@@ -11,7 +11,7 @@ class BookCategoryFilterWidget extends StatelessWidget {
       maxWidth: 300,
       child: Container(
         constraints: const BoxConstraints(
-       ),
+        ),
         padding: const EdgeInsets.all(15.0),
         margin: const EdgeInsets.symmetric(vertical: 15),
 

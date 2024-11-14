@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:liber/UI/pages/account/account_page.dart';
 import 'package:liber/UI/pages/book_reader/book_reader.dart';
 import 'package:liber/UI/pages/books/books_page.dart';
 import 'package:liber/UI/pages/home/home_page.dart';
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
       ),
       home:
           // HomePage(),
-          BookReader(),
+          // BookReader(),
+        AccountPage()
       // const BooksPage(),
     );
   }
