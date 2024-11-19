@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:liber/UI/pages/account/widgets/file_item_widget.dart';
 
 class UploadScreen extends StatelessWidget {
   @override
@@ -15,7 +16,7 @@ class UploadScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(14)
             ),
             width: 500,
-            height: 350,
+
             child: Column(
               children: [
                 Row(
@@ -31,7 +32,7 @@ class UploadScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 40),
                 // Upload Icon
-                Center(
+                const Center(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -42,31 +43,40 @@ class UploadScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 40),
-                // Buttons
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {
-                        // Save as Draft action
-                      },
-                      child: Text('SAVE AS DRAFT'),
-                      style: ElevatedButton.styleFrom(
-                        foregroundColor: Colors.black, backgroundColor: Colors.grey[300],
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: () {
-                        // Publish action
-                      },
-                      child: Text('PUBLISH'),
-                      style: ElevatedButton.styleFrom(
-                        foregroundColor: Colors.white, backgroundColor: Colors.blue,
-                      ),
-                    ),
-                  ],
-                ),
+                const SizedBox(height: 10),
+               Column(
+                 children: [
+                   FileListItem(fileName: 'your-file-here.PDF', progress: 0.3, onClose: () {  },),
+                   FileListItem(fileName: 'your-file-here2.PDF', progress: 0.2, onClose: () {  },),
+                   FileListItem(fileName: 'your-file-here3.PDF', progress: 1, onClose: () {  },),
+                   FileListItem(fileName: 'your-file-here4.PDF', progress: 0.9, onClose: () {  },),
+                   const SizedBox(height: 10),
+                   Row(
+                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                     children: [
+                       ElevatedButton(
+                         onPressed: () {
+                           // Save as Draft action
+                         },
+                         child: Text('SAVE AS DRAFT'),
+                         style: ElevatedButton.styleFrom(
+                           foregroundColor: Colors.black, backgroundColor: Colors.grey[300],
+                         ),
+                       ),
+                       ElevatedButton(
+                         onPressed: () {
+                           // Publish action
+                         },
+                         child: Text('PUBLISH'),
+                         style: ElevatedButton.styleFrom(
+                           foregroundColor: Colors.white, backgroundColor: Colors.blue,
+                         ),
+                       ),
+                     ],
+                   ),
+                 ],
+               ),
+
               ],
             ),
           ),
